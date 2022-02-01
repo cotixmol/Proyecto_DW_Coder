@@ -7,6 +7,14 @@
 
 /*HEADER*/
 /*MENU MOBILE y DESKTOP*/
+nav ul li:hover{
+    background-color: #3e4095;
+}
+nav ul li a:hover{
+    color:whitesmoke
+}
+
+
 /*VISUAL Y ESTRUCTURAL*/
 .menu{
     background-color: #3e4095;
@@ -34,6 +42,7 @@ nav ul li a{
     color:#3e4095;
     text-transform: uppercase;
     text-decoration: none;
+    content: 5px;
 }
 /*AJUSTES GRID BOTONES MENU MOBILE*/
 .buttons{
@@ -92,6 +101,10 @@ main img{
     padding: 10px;
 }
 
+.fondo_main_index{
+    background: linear-gradient(to right, black, #B09872 0%,whitesmoke 50%);
+}
+
 /*MAIN INDEX DESKTOP*/
 @media only screen and (min-width:501px){
 /*CONFIGURANDO GRIDS INDEX DESKTOP*/
@@ -118,6 +131,9 @@ main .main_text{
 /*------------------------------------------------*/
 /*da
 /*MAIN COMERCIAL MOBILE*/
+.estructura_main_comercial{
+    background: linear-gradient(to bottom, #B09872, whitesmoke);
+}
 
 /*ESCONDO IMAGENES, PORQUE VAN DE BACKGROUND*/
 @media only screen and (max-width:500px){
@@ -182,7 +198,7 @@ main .main_text{
     height: 300px;
     object-fit:cover;
     object-position: 50% 50%; 
-    border: 1px solid #B09872;
+    border: 2px solid #B09872;
 }
 
 main div.text_finanzas,.text_insumos,.text_servicios{
