@@ -1,30 +1,18 @@
 /*HEADER*/
 /*MENU MOBILE y DESKTOP*/
-/*TRANSFORMACIÓN MENU*/
-nav ul li:hover{
-    background-color: #3e4095;
-}
-nav ul li a:hover{
-    color:whitesmoke
-}
+/*VISUAL Y ESTRUCTURAL LISTAS*/
 
-
-/*VISUAL Y ESTRUCTURAL*/
+/*ARREGLAR EL TEXTO DE LOS BOTONES EN MEDIUM*/
 .menu{
     background-color: #3e4095;
     text-align: center;
+    padding: 1px;
 }
-/*AJUSTES LISTAS*/
 nav ul li{
     list-style-type: none;
     background-color: whitesmoke;
     border: 2px solid #B09872;
-    padding:5px;
-}
-/*DETALLE COLOR BORDE*/
-.menu_3,.menu_4{
-    border-bottom-color: #3e4095;
-    border-bottom-width: 5px;
+    padding:10px;
 }
 /*AJUSTES HOMEBUTTON*/
 #home_button{
@@ -36,44 +24,15 @@ nav ul li a{
     color:#3e4095;
     text-transform: uppercase;
     text-decoration: none;
-    content: 5px;
 }
-/*AJUSTES GRID BOTONES MENU MOBILE*/
-.buttons{
-    display:grid;
-    grid-template-areas: "home home" "menu_1 menu_2" "menu_3 menu_4";
+/*TRANSFORMACIÓN MENU*/
+nav ul li:hover{
+    background-color: #B09872;
 }
-.menu_1{grid-area:menu_1}
-.menu_2{grid-area:menu_2}
-.menu_3{grid-area:menu_3}
-.menu_4{grid-area:menu_4}
-#home_button{grid-area:home}
 
-/*MENU DESKTOP*/
-@media only screen and (min-width:501px){
-/*AJUSTES HOMEBUTTON*/
-#home_button{
-    background-color: transparent;
-    border-color:transparent;
-}
-/*AJUSTES LISTAS*/
-nav ul li{
-    list-style-type: none;
-    background-color: whitesmoke;
-    border: 3px solid #B09872;
-    padding: 10px;
-    margin: 5px;
-}
-/*FLEXBOX PARA EL MENU*/
-.buttons{
-    display: flex;
-    flex-flow: row nowrap;
-    align-content: center;
-    align-items: center;
-    justify-content: space-around;
-}
+
 /*FIN HEADER, FIN MENU*/
-}
+
 
 /*------------------------------------------------*/
 /*MAIN INDEX MOBILE*/
@@ -100,7 +59,7 @@ main img{
 }
 
 /*MAIN INDEX DESKTOP*/
-@media only screen and (min-width:501px){
+@media only screen and (min-width:576px){
 /*CONFIGURANDO GRIDS INDEX DESKTOP*/
 main{
     display:grid;
@@ -111,7 +70,7 @@ main .main_text{grid-area: text;}
 /*RECORTE IMAGEN*/
 main div .fondo_trigo_index{
     width: 300px;
-    height: 300px;
+    height: 450px;
     object-fit:cover;
     object-position: 90% 90%; 
     border: 3px solid #B09872;
@@ -130,7 +89,7 @@ main .main_text{
 }
 
 /*ESCONDO IMAGENES, PORQUE VAN DE BACKGROUND*/
-@media only screen and (max-width:500px){
+@media only screen and (max-width:575px){
     .servicios img,.insumos img,.finanzas img{
         display:none
     }
@@ -174,7 +133,7 @@ main .main_text{
 
 
 /*MAIN COMERCIAL DESKTOP*/
-@media only screen and (min-width:501px){
+@media only screen and (min-width:576px){
 /*ARMO EL GRID DEL COMERCIAL DESKTOP*/
 .estructura_main_comercial{
     display: grid;
@@ -279,7 +238,7 @@ main div.text_finanzas,.text_insumos,.text_servicios{
 }
 
 /*AJUSTES MOBILE*/
-@media only screen and (max-width:500px){
+@media only screen and (max-width:575px){
     #h2_desktop{
         display:none;
     }
@@ -292,7 +251,7 @@ main div.text_finanzas,.text_insumos,.text_servicios{
     }
 
 /*FOOTER DEKSTOP*/
-@media only screen and (min-width:501px){
+@media only screen and (min-width:576px){
 /*FORMATO GRIDS PIE DE PAGINA*/
 .pie_de_pagina{
     display:grid;
@@ -349,6 +308,5 @@ main div.text_finanzas,.text_insumos,.text_servicios{
 }
 /*FIN FOOTER*/
 }
-
 
 /*------------------------------------------------*/
