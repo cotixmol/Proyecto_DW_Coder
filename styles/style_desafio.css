@@ -1,8 +1,6 @@
 /*HEADER*/
 /*MENU MOBILE y DESKTOP*/
 /*VISUAL Y ESTRUCTURAL LISTAS*/
-
-/*ARREGLAR EL TEXTO DE LOS BOTONES EN MEDIUM*/
 .menu{
     background-color: #3e4095;
     text-align: center;
@@ -30,11 +28,8 @@ nav ul li:hover{
     background-color: #B09872;
 }
 
-
-/*FIN HEADER, FIN MENU*/
-
-
 /*------------------------------------------------*/
+
 /*MAIN INDEX MOBILE*/
 /*AJUSTAR IMAGEN*/
 main img{
@@ -82,7 +77,35 @@ main .main_text{
 }
 }
 /*------------------------------------------------*/
-/*da
+/*MAIN CONOCENOS*/
+/*DISPOSICION FOTOS*/
+
+main div div div .foto_feed{
+    height: 350px;;
+    object-fit:cover; 
+    padding:1px;
+}
+ /*CONFIGURACION EN DESKTOP BORRO*/
+@media only screen and (min-width:577px){
+    
+main div div div .foto_feed:hover{
+    transform: scale(3,3);
+    transition: 2s;
+    object-fit:scale-down;
+}
+main .borrador_2{
+    display:none
+}
+}
+/*CONFIGURACION EN MOBILE, BORRO LAS FOTOS*/
+
+@media only screen and (max-width:576px){
+    main .borrador_1{
+        display:none
+    }
+}
+
+/*------------------------------------------------*/
 /*MAIN COMERCIAL MOBILE*/
 .estructura_main_comercial{
     background: linear-gradient(to bottom, #B09872, whitesmoke);
