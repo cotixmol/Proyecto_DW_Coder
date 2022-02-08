@@ -170,7 +170,38 @@ main div.text_finanzas,.text_insumos,.text_servicios{
     flex-flow: nowrap;
 }
 }
+/*------------------------------------------------*/
+/*MAIN CONOCENOS*/
+/*DISPOSICION FOTOS*/
 
+main{
+    background-color: #d1c7b7;
+}
+
+main div div div .foto_feed{
+    height: 350px;;
+    object-fit:cover; 
+    padding:1px;
+}
+ /*CONFIGURACION EN DESKTOP BORRO*/
+@media only screen and (min-width:750px){
+
+main div div div .foto_feed:hover{
+    transform: scale(2.5,2.5);
+    transition: 2s;
+    object-fit:scale-down;
+}
+main .borrador_2{
+    display:none
+}
+}
+/*CONFIGURACION EN MOBILE, BORRO LAS FOTOS*/
+
+@media only screen and (max-width:751px){
+    main .borrador_1{
+        display:none
+    }
+}
 
 /*------------------------------------------------*/
 
