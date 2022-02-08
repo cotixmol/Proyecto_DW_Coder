@@ -1,0 +1,361 @@
+/*GENERAL REBOOT*/
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*HEADER*/
+/*MENU MOBILE y DESKTOP*/
+/*TRANSFORMACIÓN MENU*/
+nav ul li:hover{
+    background-color: #3e4095;
+}
+nav ul li a:hover{
+    color:whitesmoke
+}
+
+
+/*VISUAL Y ESTRUCTURAL*/
+.menu{
+    background-color: #3e4095;
+    text-align: center;
+}
+/*AJUSTES LISTAS*/
+nav ul li{
+    list-style-type: none;
+    background-color: whitesmoke;
+    border: 2px solid #B09872;
+    padding:5px;
+}
+/*DETALLE COLOR BORDE*/
+.menu_3,.menu_4{
+    border-bottom-color: #3e4095;
+    border-bottom-width: 5px;
+}
+/*AJUSTES HOMEBUTTON*/
+#home_button{
+    background-color: transparent;
+    border-color:transparent;
+}
+/*AJUSTES OPCIONES MENU*/
+nav ul li a{
+    color:#3e4095;
+    text-transform: uppercase;
+    text-decoration: none;
+    content: 5px;
+}
+/*AJUSTES GRID BOTONES MENU MOBILE*/
+.buttons{
+    display:grid;
+    grid-template-areas: "home home" "menu_1 menu_2" "menu_3 menu_4";
+}
+.menu_1{grid-area:menu_1}
+.menu_2{grid-area:menu_2}
+.menu_3{grid-area:menu_3}
+.menu_4{grid-area:menu_4}
+#home_button{grid-area:home}
+
+/*MENU DESKTOP*/
+@media only screen and (min-width:501px){
+/*AJUSTES HOMEBUTTON*/
+#home_button{
+    background-color: transparent;
+    border-color:transparent;
+}
+/*AJUSTES LISTAS*/
+nav ul li{
+    list-style-type: none;
+    background-color: whitesmoke;
+    border: 3px solid #B09872;
+    padding: 10px;
+    margin: 5px;
+}
+/*FLEXBOX PARA EL MENU*/
+.buttons{
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+/*FIN HEADER, FIN MENU*/
+}
+
+/*------------------------------------------------*/
+/*MAIN INDEX MOBILE*/
+/*AJUSTAR IMAGEN*/
+main img{
+    max-width: 100%;
+}
+/*AJUSTAR TEXTO*/   
+.main_text{
+    text-align: center;
+}
+.main_text p{
+    text-align: left;
+}
+.main_text h2{
+    padding-bottom: 10px;
+}
+.main_text h3,.main_text p{
+    padding: 10px;
+}
+
+.fondo_main_index{
+    background: linear-gradient(to right, black, #B09872 0%,whitesmoke 50%);
+}
+
+/*MAIN INDEX DESKTOP*/
+@media only screen and (min-width:501px){
+/*CONFIGURANDO GRIDS INDEX DESKTOP*/
+main{
+    display:grid;
+    grid-template-areas: "image text";
+}
+main div .fondo_trigo_index{grid-area: image;}
+main .main_text{grid-area: text;} 
+/*RECORTE IMAGEN*/
+main div .fondo_trigo_index{
+    width: 300px;
+    height: 300px;
+    object-fit:cover;
+    object-position: 90% 90%; 
+    border: 3px solid #B09872;
+    margin:20px;
+}
+main .main_text{
+    margin: 20px;
+    padding-left:20px;
+}
+}
+/*------------------------------------------------*/
+/*da
+/*MAIN COMERCIAL MOBILE*/
+.estructura_main_comercial{
+    background: linear-gradient(to bottom, #B09872, whitesmoke);
+}
+
+/*ESCONDO IMAGENES, PORQUE VAN DE BACKGROUND*/
+@media only screen and (max-width:500px){
+    .servicios img,.insumos img,.finanzas img{
+        display:none
+    }
+    /*PONGO IMAGENES DE FONDO SOLO EN MOBILE*/
+
+.estructura_main_comercial .text_servicios{
+    background-image: url(../images/comercial/servicios_agropecuarios.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color:whitesmoke;
+    text-shadow: black 2px 2px 2px;
+    
+}
+.estructura_main_comercial .text_insumos{
+    background-image: url(../images/comercial/insumos_agropecuarios.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color:whitesmoke;
+    text-shadow: black 2px 2px 2px;
+}
+
+.estructura_main_comercial .text_finanzas{
+    background-image: url(../images/comercial/servicios_financieros.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color:whitesmoke;
+    text-shadow: black 2px 2px 2px;
+}
+}
+
+/*ARMO ESTRUCTURA DE LOS TEXTOS*/
+.estructura_main_comercial div{
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding:5px;
+}
+
+
+/*MAIN COMERCIAL DESKTOP*/
+@media only screen and (min-width:501px){
+/*ARMO EL GRID DEL COMERCIAL DESKTOP*/
+.estructura_main_comercial{
+    display: grid;
+    grid-template-areas: "image_servicios image_insumos image_finanzas" "text_servicios text_insumos text_finanzas";
+}
+.image_servicios{grid-area:image_servicios}
+.image_insumos{grid-area:image_insumos}
+.image_finanzas{grid-area:image_finanzas}
+.text_servicios{grid-area: text_servicios;}
+.text_insumos{grid-area:text_insumos}
+.text_finanzas{grid-area:text_finanzas}
+
+.image_finanzas,.image_insumos,.image_servicios{
+    width: 300px;
+    height: 300px;
+    object-fit:cover;
+    object-position: 50% 50%; 
+    border: 2px solid #B09872;
+}
+
+main div.text_finanzas,.text_insumos,.text_servicios{
+    align-self: center;
+}
+
+.estructura_main_comercial{
+    display: flex;
+    flex-flow: nowrap;
+}
+}
+
+
+/*------------------------------------------------*/
+
+/*FOOTER MOBILE Y DEKSTOP*/
+/*GENERALES FOOTER*/
+.pie_de_pagina{
+    background-color: #3e4095;
+    color:whitesmoke;  
+}
+.pie_de_pagina div{
+    border: solid 1px rgb(201, 198, 198);
+}
+/*GRIDS PARA FOOTER*/
+.pie_de_pagina{
+    display:grid;
+    grid-template-areas: "newsletter newsletter" "maps contact" "maps copyright";
+    align-items: stretch;
+}
+.newsletter{grid-area: newsletter;} 
+.maps{grid-area:maps;}
+.contact{grid-area:contact;}
+.copyright{grid-area:copyright}
+
+/*FORMATO FLEX NEWSLETTER, MAPS, CONTACT, COPYRIGHT MOBILE*/
+.newsletter{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:5px;
+}
+/*AJUSTES NEWSLETTER*/
+.newsletter form select, .newsletter form input{
+    padding:3px;
+    margin: 3px;
+    width: 80vw;
+}
+.newsletter form #submit_button{
+    margin-bottom: 15px;
+}
+/*AJUSTES MAPS*/
+.maps{
+    display:flex;
+    flex-flow: column nowrap;
+    padding:5px;
+    align-items: center;
+}
+.maps label,.maps iframe{
+    padding:3px;    
+}
+/*AJUSTES CONTACT*/
+.contact{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:5px;
+}
+/*AJUSTES COPYRIGHT*/
+.copyright{
+    display:flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    padding:5px;
+    justify-content: space-around;
+}
+.copyright h3, .copyright a{
+    font-size: 12px;
+}
+#sobre_mi{
+    color:whitesmoke;
+    text-decoration: none;
+    padding:5px;
+}
+
+/*AJUSTES MOBILE*/
+@media only screen and (max-width:500px){
+    #h2_desktop{
+        display:none;
+    }
+    #contact_label{
+        display:none;
+    }
+    #maps_label_desktop{
+        display:none;
+    }
+    }
+
+/*FOOTER DEKSTOP*/
+@media only screen and (min-width:501px){
+/*FORMATO GRIDS PIE DE PAGINA*/
+.pie_de_pagina{
+    display:grid;
+    grid-template-areas: "newsletter maps" "newsletter contact" "newsletter copyright";
+    align-items: stretch;
+}
+.newsletter{grid-area: newsletter;} 
+.maps{grid-area:maps;}
+.contact{grid-area:contact;}
+.copyright{grid-area:copyright}
+
+/*FORMATO FLEX NEWSLETTER, MAPS, CONTACT, COPYRIGHT*/
+.newsletter {
+    display: flex;
+    justify-content: center;
+    padding:20px;
+    align-items: center;
+    flex-flow:column nowrap;
+}
+.contact,.copyright,.maps{
+    display:flex;
+    justify-content:flex-start;
+    padding: 20px;
+    align-items: center;
+}
+/*AJUSTES NEWLETTER*/
+.newsletter h2{
+    padding:20px;
+}
+.newsletter form select, .newsletter form input{
+    padding:5px;
+    margin: 5px;
+    width: 40vw;
+}
+#h2_mobile{
+    display:none;
+}
+/*AJUSTES MAPS*/
+.maps label,.maps iframe{
+    padding:5px;
+}
+#maps_label_mobile{
+    display:none;
+}
+/*AJUSTES CONTACT*/
+.contact a{
+    padding:5px;
+}
+/*AJUSTES COPYRIGHT*/
+.copyright{
+    display:flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+}
+/*FIN FOOTER*/
+}
+
+
+/*------------------------------------------------*/
