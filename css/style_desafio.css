@@ -9,7 +9,7 @@
 /*MENU MOBILE y DESKTOP*/
 /*TRANSFORMACIÓN MENU*/
 nav ul li:hover{
-    background-color: #3e4095;
+    background-color: #B09872;
 }
 nav ul li a:hover{
     color:whitesmoke
@@ -28,11 +28,7 @@ nav ul li{
     border: 2px solid #B09872;
     padding:5px;
 }
-/*DETALLE COLOR BORDE*/
-.menu_3,.menu_4{
-    border-bottom-color: #3e4095;
-    border-bottom-width: 5px;
-}
+
 /*AJUSTES HOMEBUTTON*/
 #home_button{
     background-color: transparent;
@@ -43,21 +39,11 @@ nav ul li a{
     color:#3e4095;
     text-transform: uppercase;
     text-decoration: none;
-    content: 5px;
 }
-/*AJUSTES GRID BOTONES MENU MOBILE*/
-.buttons{
-    display:grid;
-    grid-template-areas: "home home" "menu_1 menu_2" "menu_3 menu_4";
-}
-.menu_1{grid-area:menu_1}
-.menu_2{grid-area:menu_2}
-.menu_3{grid-area:menu_3}
-.menu_4{grid-area:menu_4}
-#home_button{grid-area:home}
+
 
 /*MENU DESKTOP*/
-@media only screen and (min-width:501px){
+@media only screen and (min-width:500px){
 /*AJUSTES HOMEBUTTON*/
 #home_button{
     background-color: transparent;
@@ -68,16 +54,8 @@ nav ul li{
     list-style-type: none;
     background-color: whitesmoke;
     border: 3px solid #B09872;
-    padding: 10px;
+    padding: 5px;
     margin: 5px;
-}
-/*FLEXBOX PARA EL MENU*/
-.buttons{
-    display: flex;
-    flex-flow: row nowrap;
-    align-content: center;
-    align-items: center;
-    justify-content: space-around;
 }
 /*FIN HEADER, FIN MENU*/
 }
@@ -88,52 +66,47 @@ nav ul li{
 main img{
     max-width: 100%;
 }
+
 /*AJUSTAR TEXTO*/   
 .main_text{
-    text-align: center;
-}
-.main_text p{
     text-align: left;
 }
-.main_text h2{
-    padding-bottom: 10px;
-}
+
 .main_text h3,.main_text p{
     padding: 10px;
 }
 
 .fondo_main_index{
-    background: linear-gradient(to right, black, #B09872 0%,whitesmoke 50%);
+    background-color: #d1c7b7;
 }
 
 /*MAIN INDEX DESKTOP*/
-@media only screen and (min-width:501px){
+@media only screen and (min-width:751px){
 /*CONFIGURANDO GRIDS INDEX DESKTOP*/
 main{
     display:grid;
     grid-template-areas: "image text";
 }
-main div .fondo_trigo_index{grid-area: image;}
+main div .fondo_trigo_index{grid-area:image;}
 main .main_text{grid-area: text;} 
 /*RECORTE IMAGEN*/
 main div .fondo_trigo_index{
     width: 300px;
-    height: 300px;
+    height: 500px;
     object-fit:cover;
     object-position: 90% 90%; 
-    border: 3px solid #B09872;
-    margin:20px;
+    border: 2px solid #3e4095;
+    margin: 5px;
 }
-main .main_text{
-    margin: 20px;
-    padding-left:20px;
+.main_text{
+    margin: 50px;
+    padding-left:30px;
 }
 }
 /*------------------------------------------------*/
-/*da
 /*MAIN COMERCIAL MOBILE*/
 .estructura_main_comercial{
-    background: linear-gradient(to bottom, #B09872, whitesmoke);
+    background-color: #d1c7b7;
 }
 
 /*ESCONDO IMAGENES, PORQUE VAN DE BACKGROUND*/
@@ -154,7 +127,7 @@ main .main_text{
 }
 .estructura_main_comercial .text_insumos{
     background-image: url(../images/comercial/insumos_agropecuarios.jpeg);
-    background-position: center;
+    background-position:top;
     background-repeat: no-repeat;
     background-size: 100%;
     color:whitesmoke;
@@ -171,35 +144,21 @@ main .main_text{
 }
 }
 
-/*ARMO ESTRUCTURA DE LOS TEXTOS*/
+/*MAIN COMERCIAL DESKTOP*/
+@media only screen and (min-width:501px){
+/*ARMO ESTRUCTURA DE LOS TEXTOS E IMAGENES*/
 .estructura_main_comercial div{
     display:flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding:5px;
+    margin:20px;
 }
-
-
-/*MAIN COMERCIAL DESKTOP*/
-@media only screen and (min-width:501px){
-/*ARMO EL GRID DEL COMERCIAL DESKTOP*/
-.estructura_main_comercial{
-    display: grid;
-    grid-template-areas: "image_servicios image_insumos image_finanzas" "text_servicios text_insumos text_finanzas";
-}
-.image_servicios{grid-area:image_servicios}
-.image_insumos{grid-area:image_insumos}
-.image_finanzas{grid-area:image_finanzas}
-.text_servicios{grid-area: text_servicios;}
-.text_insumos{grid-area:text_insumos}
-.text_finanzas{grid-area:text_finanzas}
 
 .image_finanzas,.image_insumos,.image_servicios{
     width: 300px;
     height: 300px;
-    object-fit:cover;
-    object-position: 50% 50%; 
-    border: 2px solid #B09872;
+    object-fit: cover;
+    border: 2px solid #3e4095;
 }
 
 main div.text_finanzas,.text_insumos,.text_servicios{
@@ -222,7 +181,7 @@ main div.text_finanzas,.text_insumos,.text_servicios{
     color:whitesmoke;  
 }
 .pie_de_pagina div{
-    border: solid 1px rgb(201, 198, 198);
+    border: solid 1px #B09872;
 }
 /*GRIDS PARA FOOTER*/
 .pie_de_pagina{
@@ -235,7 +194,7 @@ main div.text_finanzas,.text_insumos,.text_servicios{
 .contact{grid-area:contact;}
 .copyright{grid-area:copyright}
 
-/*FORMATO FLEX NEWSLETTER, MAPS, CONTACT, COPYRIGHT MOBILE*/
+/*FORMATO FLEX NEWSLETTER*/
 .newsletter{
     display:flex;
     flex-direction: column;
@@ -246,10 +205,10 @@ main div.text_finanzas,.text_insumos,.text_servicios{
 .newsletter form select, .newsletter form input{
     padding:3px;
     margin: 3px;
-    width: 80vw;
+    width: 85vw;
 }
 .newsletter form #submit_button{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 /*AJUSTES MAPS*/
 .maps{
@@ -266,7 +225,7 @@ main div.text_finanzas,.text_insumos,.text_servicios{
     display:flex;
     justify-content: space-around;
     align-items: center;
-    padding:5px;
+    padding:3px;
 }
 /*AJUSTES COPYRIGHT*/
 .copyright{
@@ -299,7 +258,7 @@ main div.text_finanzas,.text_insumos,.text_servicios{
     }
 
 /*FOOTER DEKSTOP*/
-@media only screen and (min-width:501px){
+@media only screen and (min-width:751px){
 /*FORMATO GRIDS PIE DE PAGINA*/
 .pie_de_pagina{
     display:grid;
@@ -356,6 +315,4 @@ main div.text_finanzas,.text_insumos,.text_servicios{
 }
 /*FIN FOOTER*/
 }
-
-
 /*------------------------------------------------*/
