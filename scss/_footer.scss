@@ -1,0 +1,143 @@
+@import "./variables";
+
+footer{
+    background-color: $main_color;
+    color:$white;
+
+    display:grid;
+    grid-template-areas: "newsletter newsletter" "maps contact" "maps copyright";
+    align-items: stretch;
+    div{
+        border: solid 1px $secondary_color;
+    }
+
+    .newsletter{
+        grid-area: newsletter;
+
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding:5px;
+        form{
+            select,input{
+                padding:3px;
+                margin: 3px;
+                width: 85vw;
+            }
+            #submit_button{
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .maps{
+        grid-area:maps;
+
+        display:flex;
+        flex-flow: column nowrap;
+        padding:5px;
+        align-items: center;
+        label,iframe{
+            padding:3px;
+        }
+    }
+
+    .contact{
+        grid-area:contact;
+
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        padding:3px;
+    }
+
+    .copyright{
+        grid-area:copyright;
+
+        display:flex;
+        flex-flow:row nowrap;
+        align-items: center;
+        padding:5px;
+        justify-content: space-around;
+        h3,a{
+            font-size:12px;
+        }
+        #sobre_mi{
+            color:$white;
+            text-decoration: none;
+            padding:5px;
+        }
+    }
+}
+
+
+@media only screen and (max-width:500px){
+    #h2_desktop{
+        display:none;
+    }
+    #contact_label{
+        display:none;
+    }
+    #maps_label_desktop{
+        display:none;
+    }
+}
+
+
+@media only screen and (min-width:751px){
+    footer{
+        display:grid;
+        grid-template-areas: "newsletter maps" "newsletter contact" "newsletter copyright";
+        align-items: stretch;
+        .newsletter{
+            grid-area:newsletter;
+
+            display: flex;
+            justify-content: center;
+            padding:20px;
+            align-items: center;
+            flex-flow:column nowrap;
+            h2{
+                padding:20px;
+            }
+            #h2_mobile{
+                display:none;
+            }
+            form{
+                select, input{
+                    padding:5px;
+                    margin: 5px;
+                    width: 40vw;
+                }
+            }
+        }
+        .maps{
+            grid-area:maps;
+
+            label,iframe{
+                padding:5px;
+            }
+            #maps_label_mobile{
+                display: none;
+            }
+        }
+        .contact{
+            grid-area:contact;
+
+            display:flex;
+            justify-content:flex-start;
+            padding: 20px;
+            align-items: center;   
+            a{
+                padding:5px;
+            }     
+        }
+        .copyright{
+            grid-area:copyright;
+
+            display:flex;
+            flex-flow: column wrap;
+            align-items: flex-start;
+        }
+    }
+}

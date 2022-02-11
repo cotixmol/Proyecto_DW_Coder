@@ -1,0 +1,17 @@
+//Paginas//
+@import "./index";
+@import "./comercial";
+@import "./contacto";
+@import "./precios";
+@import "./quienes_somos";
+
+//Partes compartidas// 
+@import "./menu";
+@import "./footer";
+
+
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}

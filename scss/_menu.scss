@@ -1,0 +1,32 @@
+@import "./variables";
+
+.menu{
+    background-color: $main_color;
+    text-align: center;
+    padding:10px;
+    ul li{
+        list-style-type: none;
+        background-color: $white;
+        border: 2px solid $secondary_color;
+        padding:5px;
+        margin:5px;
+            a{
+            color:$main_color;
+            text-transform: uppercase;
+            text-decoration: none;
+            }
+
+            a:hover{
+            color:$white;
+            }
+    }
+    ul li:hover{
+        background-color: $secondary_color;
+    }
+    ul{
+        #home_button{
+        background-color: transparent;
+        border-color:transparent;    
+        }
+    }
+}

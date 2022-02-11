@@ -1,0 +1,36 @@
+@import "./variables";
+
+.estructura_main_qs{
+    background-color: $third_color;
+    .foto_feed{
+    height: 250px;;
+    object-fit:cover; 
+    padding:1px;
+    }
+    .texto_medio{
+        text-align: center;
+    }
+}
+    
+
+@media only screen and (min-width:750px){
+    .estructura_main_qs{
+        .foto_feed:hover{
+            transform: scale(1.5,1.5);
+            transition: 2s;
+            object-fit:scale-down;
+            }
+        
+        .borrador_2{
+            display:none;
+        }
+    }
+}
+
+@media only screen and (max-width:751px){
+    .estructura_main_qs{
+        .borrador_1{
+            display:none;
+        }
+    }
+}

@@ -1,0 +1,288 @@
+
+/*------------------------------------------------*/
+/*MAIN INDEX MOBILE*/
+/*AJUSTAR IMAGEN*/
+main img{
+    max-width: 100%;
+}
+
+/*AJUSTAR TEXTO*/   
+.main_text{
+    text-align: left;
+}
+
+.main_text h3,.main_text p{
+    padding: 10px;
+}
+
+.fondo_main_index{
+    background-color: #d1c7b7;
+}
+
+/*MAIN INDEX DESKTOP*/
+@media only screen and (min-width:751px){
+/*CONFIGURANDO GRIDS INDEX DESKTOP*/
+main{
+    display:grid;
+    grid-template-areas: "image text";
+}
+main div .fondo_trigo_index{grid-area:image;}
+main .main_text{grid-area: text;} 
+/*RECORTE IMAGEN*/
+main div .fondo_trigo_index{
+    width: 300px;
+    height: 500px;
+    object-fit:cover;
+    object-position: 90% 90%; 
+    border: 2px solid #3e4095;
+    margin: 5px;
+}
+.main_text{
+    margin: 50px;
+    padding-left:30px;
+}
+}
+/*------------------------------------------------*/
+/*MAIN COMERCIAL MOBILE*/
+.estructura_main_comercial{
+    background-color: #d1c7b7;
+}
+
+/*ESCONDO IMAGENES, PORQUE VAN DE BACKGROUND*/
+@media only screen and (max-width:500px){
+    .servicios img,.insumos img,.finanzas img{
+        display:none
+    }
+    /*PONGO IMAGENES DE FONDO SOLO EN MOBILE*/
+
+.estructura_main_comercial .text_servicios{
+    background-image: url(../images/comercial/servicios_agropecuarios.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color:whitesmoke;
+    text-shadow: black 2px 2px 2px;
+    
+}
+.estructura_main_comercial .text_insumos{
+    background-image: url(../images/comercial/insumos_agropecuarios.jpeg);
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color:whitesmoke;
+    text-shadow: black 2px 2px 2px;
+}
+
+.estructura_main_comercial .text_finanzas{
+    background-image: url(../images/comercial/servicios_financieros.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color:whitesmoke;
+    text-shadow: black 2px 2px 2px;
+}
+}
+
+/*MAIN COMERCIAL DESKTOP*/
+@media only screen and (min-width:501px){
+/*ARMO ESTRUCTURA DE LOS TEXTOS E IMAGENES*/
+.estructura_main_comercial div{
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin:20px;
+}
+
+.image_finanzas,.image_insumos,.image_servicios{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid #3e4095;
+}
+
+main div.text_finanzas,.text_insumos,.text_servicios{
+    align-self: center;
+}
+
+.estructura_main_comercial{
+    display: flex;
+    flex-flow: nowrap;
+}
+}
+/*------------------------------------------------*/
+/*MAIN CONOCENOS*/
+/*DISPOSICION FOTOS*/
+
+main{
+    background-color: #d1c7b7;
+}
+
+main div div div .foto_feed{
+    height: 350px;;
+    object-fit:cover; 
+    padding:1px;
+}
+ /*CONFIGURACION EN DESKTOP BORRO*/
+@media only screen and (min-width:750px){
+
+main div div div .foto_feed:hover{
+    transform: scale(2.5,2.5);
+    transition: 2s;
+    object-fit:scale-down;
+}
+main .borrador_2{
+    display:none
+}
+}
+/*CONFIGURACION EN MOBILE, BORRO LAS FOTOS*/
+
+@media only screen and (max-width:751px){
+    main .borrador_1{
+        display:none
+    }
+}
+
+/*------------------------------------------------*/
+
+/*FOOTER MOBILE Y DEKSTOP*/
+/*GENERALES FOOTER*/
+.pie_de_pagina{
+    background-color: #3e4095;
+    color:whitesmoke;  
+}
+.pie_de_pagina div{
+    border: solid 1px #B09872;
+}
+/*GRIDS PARA FOOTER*/
+.pie_de_pagina{
+    display:grid;
+    grid-template-areas: "newsletter newsletter" "maps contact" "maps copyright";
+    align-items: stretch;
+}
+.newsletter{grid-area: newsletter;} 
+.maps{grid-area:maps;}
+.contact{grid-area:contact;}
+.copyright{grid-area:copyright}
+
+/*FORMATO FLEX NEWSLETTER*/
+.newsletter{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:5px;
+}
+/*AJUSTES NEWSLETTER*/
+.newsletter form select, .newsletter form input{
+    padding:3px;
+    margin: 3px;
+    width: 85vw;
+}
+.newsletter form #submit_button{
+    margin-bottom: 10px;
+}
+/*AJUSTES MAPS*/
+.maps{
+    display:flex;
+    flex-flow: column nowrap;
+    padding:5px;
+    align-items: center;
+}
+.maps label,.maps iframe{
+    padding:3px;    
+}
+/*AJUSTES CONTACT*/
+.contact{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:3px;
+}
+/*AJUSTES COPYRIGHT*/
+.copyright{
+    display:flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    padding:5px;
+    justify-content: space-around;
+}
+.copyright h3, .copyright a{
+    font-size: 12px;
+}
+#sobre_mi{
+    color:whitesmoke;
+    text-decoration: none;
+    padding:5px;
+}
+
+/*AJUSTES MOBILE*/
+@media only screen and (max-width:500px){
+    #h2_desktop{
+        display:none;
+    }
+    #contact_label{
+        display:none;
+    }
+    #maps_label_desktop{
+        display:none;
+    }
+    }
+
+/*FOOTER DEKSTOP*/
+@media only screen and (min-width:751px){
+/*FORMATO GRIDS PIE DE PAGINA*/
+.pie_de_pagina{
+    display:grid;
+    grid-template-areas: "newsletter maps" "newsletter contact" "newsletter copyright";
+    align-items: stretch;
+}
+.newsletter{grid-area: newsletter;} 
+.maps{grid-area:maps;}
+.contact{grid-area:contact;}
+.copyright{grid-area:copyright}
+
+/*FORMATO FLEX NEWSLETTER, MAPS, CONTACT, COPYRIGHT*/
+.newsletter {
+    display: flex;
+    justify-content: center;
+    padding:20px;
+    align-items: center;
+    flex-flow:column nowrap;
+}
+.contact,.copyright,.maps{
+    display:flex;
+    justify-content:flex-start;
+    padding: 20px;
+    align-items: center;
+}
+/*AJUSTES NEWLETTER*/
+.newsletter h2{
+    padding:20px;
+}
+.newsletter form select, .newsletter form input{
+    padding:5px;
+    margin: 5px;
+    width: 40vw;
+}
+#h2_mobile{
+    display:none;
+}
+/*AJUSTES MAPS*/
+.maps label,.maps iframe{
+    padding:5px;
+}
+#maps_label_mobile{
+    display:none;
+}
+/*AJUSTES CONTACT*/
+.contact a{
+    padding:5px;
+}
+/*AJUSTES COPYRIGHT*/
+.copyright{
+    display:flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+}
+/*FIN FOOTER*/
+}
+/*------------------------------------------------*/
