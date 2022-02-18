@@ -1,0 +1,12 @@
+$mapa_1:(
+    footer: $main_color,
+    header: $main_color,
+    body: $third_color,
+    menu: $main_color
+);
+
+@each $seccion, $color in $mapa_1{
+    #{$seccion}{
+        background-color:$color;
+    }
+}

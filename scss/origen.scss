@@ -9,6 +9,8 @@
 @import "./menu";
 @import "./footer";
 
+//SASS 2, GENERALES (LOS OTROS ESTAN DENTRO DE CADA SCSS//@at-root
+@import "./maps";
 
 *{
     margin:0;

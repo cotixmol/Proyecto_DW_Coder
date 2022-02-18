@@ -24,14 +24,11 @@
       border: 2px solid #3e4095;
       margin: 5px; } }
 
-.estructura_main_comercial {
-  background-color: #d1c7b7; }
-
 @media only screen and (max-width: 750px) {
   .estructura_main_comercial .servicios img, .estructura_main_comercial .insumos img, .estructura_main_comercial .finanzas img {
     display: none; }
   .estructura_main_comercial .text_servicios {
-    background-image: url(../images/comercial/servicios_agropecuarios.jpeg);
+    background-image: url(../images/comercial/servicios.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -39,21 +36,23 @@
     text-shadow: black 2px 2px 2px;
     margin: 5px; }
   .estructura_main_comercial .text_insumos {
-    background-image: url(../images/comercial/insumos_agropecuarios.jpeg);
-    background-position: top;
+    background-image: url(../images/comercial/insumos.jpeg);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     color: whitesmoke;
     text-shadow: black 2px 2px 2px;
     margin: 5px; }
   .estructura_main_comercial .text_finanzas {
-    background-image: url(../images/comercial/servicios_financieros.jpeg);
+    background-image: url(../images/comercial/finanzas.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     color: whitesmoke;
     text-shadow: black 2px 2px 2px;
-    margin: 5px; } }
+    margin: 5px; }
+  .estructura_main_comercial .text_insumos {
+    background-position: top; } }
 
 @media only screen and (min-width: 751px) {
   .estructura_main_comercial {
@@ -72,14 +71,13 @@
       .estructura_main_comercial div .text_finanzas, .estructura_main_comercial div .text_insumos, .estructura_main_comercial div .text_servicios {
         text-align: center; } }
 
-.estructura_main_qs {
-  background-color: #d1c7b7; }
-  .estructura_main_qs .foto_feed {
-    height: 250px;
-    object-fit: cover;
-    padding: 1px; }
-  .estructura_main_qs .texto_medio {
-    text-align: center; }
+.estructura_main_qs .foto_feed {
+  height: 250px;
+  object-fit: cover;
+  padding: 1px; }
+
+.estructura_main_qs .texto_medio {
+  text-align: center; }
 
 @media only screen and (min-width: 750px) {
   .estructura_main_qs .foto_feed:hover {
@@ -94,7 +92,6 @@
     display: none; } }
 
 .menu {
-  background-color: #3e4095;
   text-align: center;
   padding: 10px; }
   .menu ul li {
@@ -116,7 +113,6 @@
     border-color: transparent; }
 
 footer {
-  background-color: #3e4095;
   color: whitesmoke;
   display: grid;
   grid-template-areas: "newsletter newsletter" "maps contact" "maps copyright";
@@ -138,23 +134,26 @@ footer {
   footer .maps {
     grid-area: maps;
     display: flex;
-    flex-flow: column nowrap;
     padding: 5px;
     align-items: center; }
-    footer .maps label, footer .maps iframe {
-      padding: 3px; }
   footer .contact {
     grid-area: contact;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 3px; }
+    padding: 5px;
+    align-items: center; }
   footer .copyright {
     grid-area: copyright;
     display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
     padding: 5px;
+    align-items: center; }
+  footer .maps {
+    flex-flow: column nowrap; }
+    footer .maps label, footer .maps iframe {
+      padding: 3px; }
+  footer .contact {
+    justify-content: space-around; }
+  footer .copyright {
+    flex-flow: row nowrap;
     justify-content: space-around; }
     footer .copyright h3, footer .copyright a {
       font-size: 12px; }
@@ -180,6 +179,23 @@ footer {
       grid-area: newsletter;
       display: flex;
       justify-content: center;
+      align-items: center; }
+    footer .maps {
+      grid-area: maps;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    footer .contact {
+      grid-area: contact;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    footer .copyright {
+      grid-area: copyright;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    footer .newsletter {
       padding: 20px;
       align-items: center;
       flex-flow: column nowrap; }
@@ -191,25 +207,29 @@ footer {
         padding: 5px;
         margin: 5px;
         width: 40vw; }
-    footer .maps {
-      grid-area: maps; }
-      footer .maps label, footer .maps iframe {
-        padding: 5px; }
-      footer .maps #maps_label_mobile {
-        display: none; }
+    footer .maps label, footer .maps iframe {
+      padding: 5px; }
+    footer .maps #maps_label_mobile {
+      display: none; }
     footer .contact {
-      grid-area: contact;
-      display: flex;
-      justify-content: flex-start;
       padding: 20px;
       align-items: center; }
       footer .contact a {
         padding: 5px; }
     footer .copyright {
-      grid-area: copyright;
-      display: flex;
-      flex-flow: column wrap;
-      align-items: flex-start; } }
+      flex-flow: column wrap; } }
+
+footer {
+  background-color: #3e4095; }
+
+header {
+  background-color: #3e4095; }
+
+body {
+  background-color: #d1c7b7; }
+
+menu {
+  background-color: #3e4095; }
 
 * {
   margin: 0;

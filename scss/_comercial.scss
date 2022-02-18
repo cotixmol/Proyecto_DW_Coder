@@ -1,9 +1,5 @@
 @import "./variables";
 
-.estructura_main_comercial{
-    background-color: $third_color;
-}
-
 @media only screen and (max-width:750px){
     .estructura_main_comercial{
         .servicios,.insumos,.finanzas{
@@ -11,35 +7,22 @@
                 display:none;
             }
         }
-        .text_servicios{
-            background-image: url(../images/comercial/servicios_agropecuarios.jpeg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            color:$white;
-            text-shadow: $black 2px 2px 2px;
-            margin:5px;
+
+        @each $var in servicios,insumos,finanzas{
+            .text_#{$var}{
+                background-image: url(../images/comercial/#{$var}.jpeg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                color:$white;
+                text-shadow: $black 2px 2px 2px;
+                margin:5px;
+            }
         }
         .text_insumos{
-            background-image: url(../images/comercial/insumos_agropecuarios.jpeg);
             background-position:top;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            color:$white;
-            text-shadow: $black 2px 2px 2px;
-            margin:5px;
-
         }
-        .text_finanzas{
-            background-image: url(../images/comercial/servicios_financieros.jpeg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            color:$white;
-            text-shadow: $black 2px 2px 2px;
-            margin:5px;
 
-        }
     }
 }
 
