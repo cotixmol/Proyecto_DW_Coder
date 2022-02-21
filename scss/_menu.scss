@@ -1,31 +1,33 @@
 @import "./variables";
 
+//Configuro el centrado del texto y acomodo un margen a la derecha//
 .menu{
     text-align: center;
-    padding:10px;
+    padding-right: 35px;
+    //Cambio de color al pasar por encima//
+    ul li:hover{
+        background-color: $secondary_color;
+    }
+    //Acomodo diseños de botones, distancias, textos//
     ul li{
         list-style-type: none;
         background-color: $white;
         border: 2px solid $secondary_color;
-        padding:5px;
-        margin:5px;
+        padding: 5px;
+        margin-bottom: 10px;
             a{
             color:$main_color;
-            text-transform: uppercase;
             text-decoration: none;
             }
-
+            //El texto cambia a blanco cuando pasas por encima//
             a:hover{
             color:$white;
             }
     }
-    ul li:hover{
-        background-color: $secondary_color;
-    }
     ul{
         #home_button{
         background-color: transparent;
-        border-color:transparent;    
+        border-color:transparent; 
         }
     }
 }

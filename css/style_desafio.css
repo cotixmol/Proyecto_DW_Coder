@@ -132,21 +132,20 @@
 
 .menu {
   text-align: center;
-  padding: 10px; }
+  padding-right: 35px; }
+  .menu ul li:hover {
+    background-color: #B09872; }
   .menu ul li {
     list-style-type: none;
     background-color: whitesmoke;
     border: 2px solid #B09872;
     padding: 5px;
-    margin: 5px; }
+    margin-bottom: 10px; }
     .menu ul li a {
       color: #3e4095;
-      text-transform: uppercase;
       text-decoration: none; }
     .menu ul li a:hover {
       color: whitesmoke; }
-  .menu ul li:hover {
-    background-color: #B09872; }
   .menu ul #home_button {
     background-color: transparent;
     border-color: transparent; }
