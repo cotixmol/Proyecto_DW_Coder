@@ -1,50 +1,73 @@
 @import "./variables";
 
+//Aca se configura las condiciones de la pantalla en MOBILE//
+
 @media only screen and (max-width:750px){
+    //Se borran las imagenes que estan en DESKTOP//
     .estructura_main_comercial{
-        .servicios,.insumos,.finanzas{
-            img{
+        @each $var in servicios,insumos,finanzas{
+            .image_#{$var}{
                 display:none;
             }
         }
-
+    //Se ponen las imagenes de fondo en MOBILE. Se acomoda texto y imagenes//
         @each $var in servicios,insumos,finanzas{
             .text_#{$var}{
-                background-image: url(../images/comercial/#{$var}.jpeg);
+                background-image: url(../images/comercial/#{$var}_dark.jpg);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 100%;
                 color:$white;
                 text-shadow: $black 2px 2px 2px;
+                padding:5px;
                 margin:5px;
             }
         }
-        .text_insumos{
-            background-position:top;
-        }
-
     }
 }
 
+
+//Aca se configuran las condiciones de DESKTOP//
+
 @media only screen and (min-width:751px){
+    
+    //Se configura el Flexbox del main con clase "estructura_main_comercial"//
     .estructura_main_comercial{
         display: flex;
         flex-flow: nowrap;
-        div{
-            display:flex;
-            flex-flow: column nowrap;
-            align-items: center;
-            margin:20px;
-            .image_finanzas,.image_insumos,.image_servicios{
-                width: 300px;
-                height: 300px;
-                object-fit: cover;
-                border: 2px solid $main_color;
+
+        //Se configura la imagen y el texto de cada DIV en forma de columna, se centra y se le da un margen"
+        @each $var in finanzas,insumos,servicios{
+            .#{$var}{
+              display:flex;
+              flex-flow: column nowrap;
+              align-items: center;
+              margin:5px;
+              margin-top:20px;
+              margin-bottom:20px;
+                }
             }
+               
+            //Se configuran las imagenes del DESKTOP"
+            @each $var in finanzas,insumos,servicios{
+                .image_#{$var}{
+                    height: 350px;
+                    width:32vw;
+                    object-fit:cover;
+                    margin-top: 10px;
+                    border: 2px solid $main_color;
+                }
+            }
+            
+            //Armo los cuadros para el texto, los centro, los ubico//
             .text_finanzas,.text_insumos,.text_servicios{
                 text-align: center;
+                height: 350px;
+                width:32vw;
+                padding-top:20%;
+                margin-top:10px;
+                border: 2px solid $main_color;
+                }
             }
-        }
-        
-    }
-}
+        }  
+    
