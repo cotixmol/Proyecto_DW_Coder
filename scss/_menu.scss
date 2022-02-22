@@ -22,8 +22,10 @@
             //El texto cambia a blanco cuando pasas por encima//
             a:hover{
             color:$white;
+            font-weight: bold;
             }
     }
+    //Elimino del logo las propiedades otorgadas a otros items//
     ul{
         #home_button{
         background-color: transparent;

@@ -1,34 +1,15 @@
 @import "./variables";
 
+//MOBILE//
+//Acomodo a traves de GRIDS la estructura del footer en MOBILE//
 footer{
     color:$white;
     display:grid;
     grid-template-areas: "newsletter newsletter" "maps contact" "maps copyright";
     align-items: stretch;
-    div{
-        border: solid 1px $secondary_color;
-    }
-
-    .newsletter{
-        grid-area: newsletter;
-
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        padding:5px;
-        form{
-            select,input{
-                padding:3px;
-                margin: 3px;
-                width: 85vw;
-            }
-            #submit_button{
-                margin-bottom: 10px;
-            }
-        }
-    }
-
-    @each $var in maps, contact, copyright{
+    
+    //Armo una estructura en comun con todas las partes del footer//
+    @each $var in maps, contact, copyright, newsletter{
         .#{$var}{
             grid-area:#{$var};
             display:flex;
@@ -37,31 +18,65 @@ footer{
         }
     }
 
+    //Pongo lineas entre los GRIDS//
+    div{
+        border: solid 2px $third_color;
+    }
+
+    //Configuración newsletter MOBILE//
+    //Pongo el titulo y las forms una sobre otras//
+    .newsletter{
+        flex-direction: column;
+
+        //Configuración de ubicación de formularios y botones dentro del newsletter//
+        form{
+            select,input{
+                padding:3px;
+                margin: 3px;
+                width: 85vw;
+            }
+            #submit_button{
+                margin-top:10px;
+                margin-bottom: 10px;
+                width:30vw;
+            }
+        }
+    }
+
+    //Configuración maps MOBILE//
     .maps{
+        .maps_label_mobile{
+            font-weight: bold;
+            padding:10px;
+        }
         flex-flow: column nowrap;
         label,iframe{
-            padding:3px;
+            padding: 5px;
         }
     }
+    
+    //Configuración contact MOBILE//
     .contact{
         justify-content: space-around;
+        padding:10px;
     }
+
+    //Configuración copyright MOBILE//
     .copyright{
-        flex-flow:row nowrap;
-        justify-content: space-around;
-        h3,a{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        h3,a,#sobre_mi{
             font-size:12px;
-        }
-        #sobre_mi{
-            color:$white;
+            padding:10px;
             text-decoration: none;
-            padding:5px;
+            color:$white;
         }
     }
 }
 
-
-@media only screen and (max-width:500px){
+//Escondo las cosas que no tienen que verse en modo MOBILE//
+@media only screen and (max-width:750px){
     #h2_desktop{
         display:none;
     }
@@ -73,29 +88,32 @@ footer{
     }
 }
 
-
+//DESKTOP//
 @media only screen and (min-width:751px){
     footer{
+        //Hago la estructura con GRIDS del footer en DESKTOP//
         display:grid;
         grid-template-areas: "newsletter maps" "newsletter contact" "newsletter copyright";
         align-items: stretch;
         
+        //Organizo aspectos en comun de las secciones del footer con Flexbox//
         @each $var in newsletter,maps,contact,copyright{
             .#{$var}{
                 grid-area:#{$var};
                 display:flex;
-                justify-content: center;
                 align-items: center;
+                padding:20px;
             }
         }
         
+        //Estructuración particular del newsletter en DESKTOP//
         .newsletter{
-            padding:20px;
-            align-items: center;
             flex-flow:column nowrap;
+            //Titulo//
             h2{
                 padding:20px;
             }
+            //Escondo el titulo de MOBILE//
             #h2_mobile{
                 display:none;
             }
@@ -103,27 +121,27 @@ footer{
                 select, input{
                     padding:5px;
                     margin: 5px;
-                    width: 40vw;
+                    width: 60vw;
                 }
             }
         }
+
+        //Estructuración particular del maps en DESKTOP//
         .maps{
             label,iframe{
                 padding:5px;
             }
+            //Escondo el titulo de MOBILE//
             #maps_label_mobile{
                 display: none;
             }
         }
+
+        //Estructuración particular del contact en DESKTOP//
         .contact{
-            padding: 20px;
-            align-items: center;   
             a{
                 padding:5px;
             }     
-        }
-        .copyright{
-            flex-flow: column wrap;
         }
     }
 }

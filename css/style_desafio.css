@@ -145,7 +145,8 @@
       color: #3e4095;
       text-decoration: none; }
     .menu ul li a:hover {
-      color: whitesmoke; }
+      color: whitesmoke;
+      font-weight: bold; }
   .menu ul #home_button {
     background-color: transparent;
     border-color: transparent; }
@@ -155,20 +156,6 @@ footer {
   display: grid;
   grid-template-areas: "newsletter newsletter" "maps contact" "maps copyright";
   align-items: stretch; }
-  footer div {
-    border: solid 1px #B09872; }
-  footer .newsletter {
-    grid-area: newsletter;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px; }
-    footer .newsletter form select, footer .newsletter form input {
-      padding: 3px;
-      margin: 3px;
-      width: 85vw; }
-    footer .newsletter form #submit_button {
-      margin-bottom: 10px; }
   footer .maps {
     grid-area: maps;
     display: flex;
@@ -184,23 +171,44 @@ footer {
     display: flex;
     padding: 5px;
     align-items: center; }
+  footer .newsletter {
+    grid-area: newsletter;
+    display: flex;
+    padding: 5px;
+    align-items: center; }
+  footer div {
+    border: solid 2px #d1c7b7; }
+  footer .newsletter {
+    flex-direction: column; }
+    footer .newsletter form select, footer .newsletter form input {
+      padding: 3px;
+      margin: 3px;
+      width: 85vw; }
+    footer .newsletter form #submit_button {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 30vw; }
   footer .maps {
     flex-flow: column nowrap; }
+    footer .maps .maps_label_mobile {
+      font-weight: bold;
+      padding: 10px; }
     footer .maps label, footer .maps iframe {
-      padding: 3px; }
-  footer .contact {
-    justify-content: space-around; }
-  footer .copyright {
-    flex-flow: row nowrap;
-    justify-content: space-around; }
-    footer .copyright h3, footer .copyright a {
-      font-size: 12px; }
-    footer .copyright #sobre_mi {
-      color: whitesmoke;
-      text-decoration: none;
       padding: 5px; }
+  footer .contact {
+    justify-content: space-around;
+    padding: 10px; }
+  footer .copyright {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center; }
+    footer .copyright h3, footer .copyright a, footer .copyright #sobre_mi {
+      font-size: 12px;
+      padding: 10px;
+      text-decoration: none;
+      color: whitesmoke; }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 750px) {
   #h2_desktop {
     display: none; }
   #contact_label {
@@ -216,26 +224,24 @@ footer {
     footer .newsletter {
       grid-area: newsletter;
       display: flex;
-      justify-content: center;
-      align-items: center; }
+      align-items: center;
+      padding: 20px; }
     footer .maps {
       grid-area: maps;
       display: flex;
-      justify-content: center;
-      align-items: center; }
+      align-items: center;
+      padding: 20px; }
     footer .contact {
       grid-area: contact;
       display: flex;
-      justify-content: center;
-      align-items: center; }
+      align-items: center;
+      padding: 20px; }
     footer .copyright {
       grid-area: copyright;
       display: flex;
-      justify-content: center;
-      align-items: center; }
-    footer .newsletter {
-      padding: 20px;
       align-items: center;
+      padding: 20px; }
+    footer .newsletter {
       flex-flow: column nowrap; }
       footer .newsletter h2 {
         padding: 20px; }
@@ -244,18 +250,13 @@ footer {
       footer .newsletter form select, footer .newsletter form input {
         padding: 5px;
         margin: 5px;
-        width: 40vw; }
+        width: 60vw; }
     footer .maps label, footer .maps iframe {
       padding: 5px; }
     footer .maps #maps_label_mobile {
       display: none; }
-    footer .contact {
-      padding: 20px;
-      align-items: center; }
-      footer .contact a {
-        padding: 5px; }
-    footer .copyright {
-      flex-flow: column wrap; } }
+    footer .contact a {
+      padding: 5px; } }
 
 footer {
   background-color: #3e4095; }
