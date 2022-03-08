@@ -13,27 +13,65 @@
     @each $var in soja_price, trigo_price, maiz_price, sorgo_price{
         .#{$var}{
             grid-area:#{$var};
-            background-color: $white;
-            border: $third_color 5px solid;
+            background-image: url(../images/precios/grafico.png);
+            background-repeat: no-repeat;
+            background-size:cover;
+            border: $main_color 2px solid;
+            width: 45vw;
+            margin-left:2vw;
+            margin-bottom:10px;
             ul{
                 //Configuro el orden de los contenedores en la lista//
                 display:flex;
                 flex-direction: column;
+                color:$main_color;
+                padding-top:15px;
+                
                 li{
                     //Configuro el texto de listas//
                     list-style: none;
                     display:flex;
                     justify-content: center;
-                    padding:5px;
-                    margin-right:40px;
+                    margin-right:5vw;
                 }
+                //Edición de textos de precios//
                 .nombre_cereal{
-                    font-size: 30px;
+                    font-size: 24px;
                 }
+                .precio_cereal{
+                    font-weight:bold;
+                    font-size: 32px;
+                    color:$main_color;
+                    padding:0px;
+                }
+                .cambio_24_cereal, .cambio_24porc_cereal{
+                    padding-bottom:0px;
+                    padding-top:0px;
+                    font-size:20px;
+                    font-weight:bold;
+                }
+                .cambio_24_cereal{
+                    text-decoration: underline;
+                }
+                //Color segun porcentaje//
+                //VERDE//
+                @each $var in soja, sorgo, maiz{
+                    #cambio_24porc_cereal_#{$var}{
+                        color:$green;
+                    }
+                }
+                //ROJO//
+                @each $var in trigo{
+                    #cambio_24porc_cereal_#{$var}{
+                        color:$red;
+                    }
+                }
+                
+                //Borro los precios que no aparecen en MOBILE//
                 .desktop_extra_prices{
-                    //Borro los precios que no aparecen en MOBILE//
                     display:none;
                 }
+            
             }
         }
     }

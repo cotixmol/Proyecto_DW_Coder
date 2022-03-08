@@ -116,70 +116,174 @@
     grid-template-areas: "soja_price trigo_price" "maiz_price sorgo_price"; }
   .soja_price {
     grid-area: soja_price;
-    background-color: whitesmoke;
-    border: #d1c7b7 5px solid; }
+    background-image: url(../images/precios/grafico.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: #3e4095 2px solid;
+    width: 45vw;
+    margin-left: 2vw;
+    margin-bottom: 10px; }
     .soja_price ul {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      color: #3e4095;
+      padding-top: 15px; }
       .soja_price ul li {
         list-style: none;
         display: flex;
         justify-content: center;
-        padding: 5px;
-        margin-right: 40px; }
+        margin-right: 5vw; }
       .soja_price ul .nombre_cereal {
-        font-size: 30px; }
+        font-size: 24px; }
+      .soja_price ul .precio_cereal {
+        font-weight: bold;
+        font-size: 32px;
+        color: #3e4095;
+        padding: 0px; }
+      .soja_price ul .cambio_24_cereal, .soja_price ul .cambio_24porc_cereal {
+        padding-bottom: 0px;
+        padding-top: 0px;
+        font-size: 20px;
+        font-weight: bold; }
+      .soja_price ul .cambio_24_cereal {
+        text-decoration: underline; }
+      .soja_price ul #cambio_24porc_cereal_soja {
+        color: #24a49c; }
+      .soja_price ul #cambio_24porc_cereal_sorgo {
+        color: #24a49c; }
+      .soja_price ul #cambio_24porc_cereal_maiz {
+        color: #24a49c; }
+      .soja_price ul #cambio_24porc_cereal_trigo {
+        color: #ec5454; }
       .soja_price ul .desktop_extra_prices {
         display: none; }
   .trigo_price {
     grid-area: trigo_price;
-    background-color: whitesmoke;
-    border: #d1c7b7 5px solid; }
+    background-image: url(../images/precios/grafico.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: #3e4095 2px solid;
+    width: 45vw;
+    margin-left: 2vw;
+    margin-bottom: 10px; }
     .trigo_price ul {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      color: #3e4095;
+      padding-top: 15px; }
       .trigo_price ul li {
         list-style: none;
         display: flex;
         justify-content: center;
-        padding: 5px;
-        margin-right: 40px; }
+        margin-right: 5vw; }
       .trigo_price ul .nombre_cereal {
-        font-size: 30px; }
+        font-size: 24px; }
+      .trigo_price ul .precio_cereal {
+        font-weight: bold;
+        font-size: 32px;
+        color: #3e4095;
+        padding: 0px; }
+      .trigo_price ul .cambio_24_cereal, .trigo_price ul .cambio_24porc_cereal {
+        padding-bottom: 0px;
+        padding-top: 0px;
+        font-size: 20px;
+        font-weight: bold; }
+      .trigo_price ul .cambio_24_cereal {
+        text-decoration: underline; }
+      .trigo_price ul #cambio_24porc_cereal_soja {
+        color: #24a49c; }
+      .trigo_price ul #cambio_24porc_cereal_sorgo {
+        color: #24a49c; }
+      .trigo_price ul #cambio_24porc_cereal_maiz {
+        color: #24a49c; }
+      .trigo_price ul #cambio_24porc_cereal_trigo {
+        color: #ec5454; }
       .trigo_price ul .desktop_extra_prices {
         display: none; }
   .maiz_price {
     grid-area: maiz_price;
-    background-color: whitesmoke;
-    border: #d1c7b7 5px solid; }
+    background-image: url(../images/precios/grafico.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: #3e4095 2px solid;
+    width: 45vw;
+    margin-left: 2vw;
+    margin-bottom: 10px; }
     .maiz_price ul {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      color: #3e4095;
+      padding-top: 15px; }
       .maiz_price ul li {
         list-style: none;
         display: flex;
         justify-content: center;
-        padding: 5px;
-        margin-right: 40px; }
+        margin-right: 5vw; }
       .maiz_price ul .nombre_cereal {
-        font-size: 30px; }
+        font-size: 24px; }
+      .maiz_price ul .precio_cereal {
+        font-weight: bold;
+        font-size: 32px;
+        color: #3e4095;
+        padding: 0px; }
+      .maiz_price ul .cambio_24_cereal, .maiz_price ul .cambio_24porc_cereal {
+        padding-bottom: 0px;
+        padding-top: 0px;
+        font-size: 20px;
+        font-weight: bold; }
+      .maiz_price ul .cambio_24_cereal {
+        text-decoration: underline; }
+      .maiz_price ul #cambio_24porc_cereal_soja {
+        color: #24a49c; }
+      .maiz_price ul #cambio_24porc_cereal_sorgo {
+        color: #24a49c; }
+      .maiz_price ul #cambio_24porc_cereal_maiz {
+        color: #24a49c; }
+      .maiz_price ul #cambio_24porc_cereal_trigo {
+        color: #ec5454; }
       .maiz_price ul .desktop_extra_prices {
         display: none; }
   .sorgo_price {
     grid-area: sorgo_price;
-    background-color: whitesmoke;
-    border: #d1c7b7 5px solid; }
+    background-image: url(../images/precios/grafico.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: #3e4095 2px solid;
+    width: 45vw;
+    margin-left: 2vw;
+    margin-bottom: 10px; }
     .sorgo_price ul {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      color: #3e4095;
+      padding-top: 15px; }
       .sorgo_price ul li {
         list-style: none;
         display: flex;
         justify-content: center;
-        padding: 5px;
-        margin-right: 40px; }
+        margin-right: 5vw; }
       .sorgo_price ul .nombre_cereal {
-        font-size: 30px; }
+        font-size: 24px; }
+      .sorgo_price ul .precio_cereal {
+        font-weight: bold;
+        font-size: 32px;
+        color: #3e4095;
+        padding: 0px; }
+      .sorgo_price ul .cambio_24_cereal, .sorgo_price ul .cambio_24porc_cereal {
+        padding-bottom: 0px;
+        padding-top: 0px;
+        font-size: 20px;
+        font-weight: bold; }
+      .sorgo_price ul .cambio_24_cereal {
+        text-decoration: underline; }
+      .sorgo_price ul #cambio_24porc_cereal_soja {
+        color: #24a49c; }
+      .sorgo_price ul #cambio_24porc_cereal_sorgo {
+        color: #24a49c; }
+      .sorgo_price ul #cambio_24porc_cereal_maiz {
+        color: #24a49c; }
+      .sorgo_price ul #cambio_24porc_cereal_trigo {
+        color: #ec5454; }
       .sorgo_price ul .desktop_extra_prices {
         display: none; } }
 
