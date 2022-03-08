@@ -1,2 +1,41 @@
 @import "./variables";
 
+//Configuramos la pantalla MOBILE//
+
+@media only screen and (max-width:750px){
+    .price{
+        //Armo la estructura 2x2 MOBILE con Grids//
+
+        display:grid;
+        grid-template-areas: "soja_price trigo_price" "maiz_price sorgo_price";
+    }
+        //Armo la estructura ahorrando codigo//
+    @each $var in soja_price, trigo_price, maiz_price, sorgo_price{
+        .#{$var}{
+            grid-area:#{$var};
+            background-color: $white;
+            border: $third_color 5px solid;
+            ul{
+                //Configuro el orden de los contenedores en la lista//
+                display:flex;
+                flex-direction: column;
+                li{
+                    //Configuro el texto de listas//
+                    list-style: none;
+                    display:flex;
+                    justify-content: center;
+                    padding:5px;
+                    margin-right:40px;
+                }
+                .nombre_cereal{
+                    font-size: 30px;
+                }
+                .desktop_extra_prices{
+                    //Borro los precios que no aparecen en MOBILE//
+                    display:none;
+                }
+            }
+        }
+    }
+}
+

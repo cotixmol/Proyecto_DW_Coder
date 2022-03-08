@@ -110,6 +110,79 @@
       margin-top: 10px;
       border: 2px solid #3e4095; } }
 
+@media only screen and (max-width: 750px) {
+  .price {
+    display: grid;
+    grid-template-areas: "soja_price trigo_price" "maiz_price sorgo_price"; }
+  .soja_price {
+    grid-area: soja_price;
+    background-color: whitesmoke;
+    border: #d1c7b7 5px solid; }
+    .soja_price ul {
+      display: flex;
+      flex-direction: column; }
+      .soja_price ul li {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        margin-right: 40px; }
+      .soja_price ul .nombre_cereal {
+        font-size: 30px; }
+      .soja_price ul .desktop_extra_prices {
+        display: none; }
+  .trigo_price {
+    grid-area: trigo_price;
+    background-color: whitesmoke;
+    border: #d1c7b7 5px solid; }
+    .trigo_price ul {
+      display: flex;
+      flex-direction: column; }
+      .trigo_price ul li {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        margin-right: 40px; }
+      .trigo_price ul .nombre_cereal {
+        font-size: 30px; }
+      .trigo_price ul .desktop_extra_prices {
+        display: none; }
+  .maiz_price {
+    grid-area: maiz_price;
+    background-color: whitesmoke;
+    border: #d1c7b7 5px solid; }
+    .maiz_price ul {
+      display: flex;
+      flex-direction: column; }
+      .maiz_price ul li {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        margin-right: 40px; }
+      .maiz_price ul .nombre_cereal {
+        font-size: 30px; }
+      .maiz_price ul .desktop_extra_prices {
+        display: none; }
+  .sorgo_price {
+    grid-area: sorgo_price;
+    background-color: whitesmoke;
+    border: #d1c7b7 5px solid; }
+    .sorgo_price ul {
+      display: flex;
+      flex-direction: column; }
+      .sorgo_price ul li {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        margin-right: 40px; }
+      .sorgo_price ul .nombre_cereal {
+        font-size: 30px; }
+      .sorgo_price ul .desktop_extra_prices {
+        display: none; } }
+
 .estructura_main_qs .foto_feed {
   height: 250px;
   object-fit: cover;
