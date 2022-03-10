@@ -46,8 +46,12 @@
                 .cambio_24_cereal, .cambio_24porc_cereal{
                     padding-bottom:0px;
                     padding-top:0px;
-                    font-size:20px;
+                    font-size:18px;
                     font-weight:bold;
+                    text-align: center;
+                }
+                .cambio_24porc_cereal{
+                    font-size: 24px;
                 }
                 .cambio_24_cereal{
                     text-decoration: underline;
@@ -89,15 +93,33 @@
         display:grid;
         grid-template-areas: "imagen_cereal soja_price" "imagen_cereal trigo_price" "imagen_cereal maiz_price" "imagen_cereal sorgo_price";
     }
-
+    .imagen_cereales img{
+        width: 30vw;
+        height:730px;
+        object-fit:cover;
+        margin-left:10px;
+        margin-right:10px;
+        margin-bottom:10px;
+        
+    }
     //QUE MANERA DE RESUMIR CODIGO!!!//
     //Estructura Grid General e interna de cada cuadro//
     @each $var in imagen_cereal, soja_price, trigo_price, maiz_price, sorgo_price{
         .#{$var}{
             grid-area:#{$var};
-            ul, div{
+
+            border: 2px solid $main_color;
+            width: 65vw;
+            background-image: url(../images/precios/graph_desktop.jpeg);
+            padding-top:15px;
+            margin-bottom:10px;
+            margin-right:10px;
+            
+            //ESTRUCTURA COMUN DE TODOS LOS ELEMENTOS DE LAS LISTAS//
+            ul{
                 display:flex;
-                flex-flow: row no wrap;           
+                flex-flow: row wrap;
+                align-items: baseline;           
                 display:grid;
                 grid-template-areas: "nombre_cereal nombre_cereal nombre_cereal nombre_cereal" "desktop_extra_prices cambio_24_cereal cambio_7_cereal cambio_30_cereal" "precio_cereal cambio_24porc_cereal cambio_7porc_cereal cambio_30porc_cereal";
                 @each $var in nombre_cereal, desktop_extra_prices, precio_cereal, cambio_24_cereal, cambio_24porc_cereal, cambio_7_cereal, cambio_7porc_cereal, cambio_30_cereal, cambio_30porc_cereal {
@@ -105,9 +127,72 @@
                         grid-area:#{$var};    
                 }
             }
-                
                 li{
                     list-style: none;
+                    color:$main_color;
+                }
+            }
+            //EDICIÓN DE CADA TEXTO DENTRO DE CADA CUADRO CON UNA SOLA CLASE POR TIPO DE TEXTO//
+            .nombre_cereal{
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .desktop_extra_prices,.cambio_24_cereal{
+                font-size: 20px;
+                text-decoration: underline;
+            }
+            .cambio_24_cereal,.cambio_24porc_cereal{
+                padding-right:30px;
+                margin-right:10px;
+                margin-left:10px;
+            }
+            .cambio_7_cereal,.cambio_30_cereal{
+                font-size: 16px;
+                text-decoration: underline;
+            }
+            .cambio_7porc_cereal,.cambio_30porc_cereal{
+                font-weight: bold;
+                font-size: 18px;
+            }
+            .precio_cereal,.cambio_24porc_cereal{
+                font-size:30px;
+                font-weight: bold;
+            }
+            
+            //EDITO LOS COLORES DE LOS PORCENTAJES//
+            //EL PRIMER EACH ES INNECESARIO, PERO AYUDA A DIFERENCIAR PARA CAMBIAR RAPIDO//
+            //PORCENTAJES CADA 24H//
+            @each $number in 24{
+                @each $var in soja, sorgo, maiz{
+                    #cambio_#{$number}porc_cereal_#{$var}{
+                        color:$green;
+                    }
+                }
+                @each $var in trigo{
+                    #cambio_#{$number}porc_cereal_#{$var}{
+                        color:$red;
+                    }
+                }
+            }
+            //PORCENTAJES CADA 7D//
+            @each $number in 7{
+                @each $var in soja, sorgo, maiz, trigo{
+                    #cambio_#{$number}porc_cereal_#{$var}{
+                        color:$green;
+                    }
+                }
+            }
+            //PORCENTAJES CADA 30D//
+            @each $number in 30{
+                @each $var in soja, sorgo{
+                    #cambio_#{$number}porc_cereal_#{$var}{
+                        color:$green;
+                    }
+                }
+                @each $var in trigo, maiz{
+                    #cambio_#{$number}porc_cereal_#{$var}{
+                        color:$red;
+                    }
                 }
             }
         }
