@@ -307,7 +307,7 @@
     grid-template-areas: "imagen_cereal soja_price" "imagen_cereal trigo_price" "imagen_cereal maiz_price" "imagen_cereal sorgo_price"; }
   .imagen_cereales img {
     width: 30vw;
-    height: 730px;
+    height: 750px;
     object-fit: cover;
     margin-left: 10px;
     margin-right: 10px;
