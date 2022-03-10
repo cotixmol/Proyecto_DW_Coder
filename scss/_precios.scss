@@ -5,12 +5,11 @@
 @media only screen and (max-width:750px){
     .price{
         //Armo la estructura 2x2 MOBILE con Grids//
-
         display:grid;
         grid-template-areas: "soja_price trigo_price" "maiz_price sorgo_price";
     }
         //Armo la estructura ahorrando codigo//
-    @each $var in soja_price, trigo_price, maiz_price, sorgo_price{
+        @each $var in soja_price, trigo_price, maiz_price, sorgo_price{
         .#{$var}{
             grid-area:#{$var};
             background-image: url(../images/precios/grafico.png);
@@ -68,12 +67,49 @@
                 }
                 
                 //Borro los precios que no aparecen en MOBILE//
-                .desktop_extra_prices{
+                .cambio_7_cereal,.cambio_30_cereal,.cambio_7porc_cereal,.cambio_30porc_cereal{
                     display:none;
                 }
             
             }
         }
     }
+    .imagen_cereales{
+        display:none;
+    }
 }
 
+//Configuramos la pantalla DESKTOP//
+
+@media only screen and (min-width:750px){
+    //Armamos la estructura de Grids en DESKTOP//
+
+    .estructura_main_precios{
+        //Armo la estructura 2x2 MOBILE con Grids//
+        display:grid;
+        grid-template-areas: "imagen_cereal soja_price" "imagen_cereal trigo_price" "imagen_cereal maiz_price" "imagen_cereal sorgo_price";
+    }
+
+    //QUE MANERA DE RESUMIR CODIGO!!!//
+    //Estructura Grid General e interna de cada cuadro//
+    @each $var in imagen_cereal, soja_price, trigo_price, maiz_price, sorgo_price{
+        .#{$var}{
+            grid-area:#{$var};
+            ul, div{
+                display:flex;
+                flex-flow: row no wrap;           
+                display:grid;
+                grid-template-areas: "nombre_cereal nombre_cereal nombre_cereal nombre_cereal" "desktop_extra_prices cambio_24_cereal cambio_7_cereal cambio_30_cereal" "precio_cereal cambio_24porc_cereal cambio_7porc_cereal cambio_30porc_cereal";
+                @each $var in nombre_cereal, desktop_extra_prices, precio_cereal, cambio_24_cereal, cambio_24porc_cereal, cambio_7_cereal, cambio_7porc_cereal, cambio_30_cereal, cambio_30porc_cereal {
+                    .#{$var}{
+                        grid-area:#{$var};    
+                }
+            }
+                
+                li{
+                    list-style: none;
+                }
+            }
+        }
+    }
+}

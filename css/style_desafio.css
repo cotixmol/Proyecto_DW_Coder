@@ -155,7 +155,7 @@
         color: #24a49c; }
       .soja_price ul #cambio_24porc_cereal_trigo {
         color: #ec5454; }
-      .soja_price ul .desktop_extra_prices {
+      .soja_price ul .cambio_7_cereal, .soja_price ul .cambio_30_cereal, .soja_price ul .cambio_7porc_cereal, .soja_price ul .cambio_30porc_cereal {
         display: none; }
   .trigo_price {
     grid-area: trigo_price;
@@ -198,7 +198,7 @@
         color: #24a49c; }
       .trigo_price ul #cambio_24porc_cereal_trigo {
         color: #ec5454; }
-      .trigo_price ul .desktop_extra_prices {
+      .trigo_price ul .cambio_7_cereal, .trigo_price ul .cambio_30_cereal, .trigo_price ul .cambio_7porc_cereal, .trigo_price ul .cambio_30porc_cereal {
         display: none; }
   .maiz_price {
     grid-area: maiz_price;
@@ -241,7 +241,7 @@
         color: #24a49c; }
       .maiz_price ul #cambio_24porc_cereal_trigo {
         color: #ec5454; }
-      .maiz_price ul .desktop_extra_prices {
+      .maiz_price ul .cambio_7_cereal, .maiz_price ul .cambio_30_cereal, .maiz_price ul .cambio_7porc_cereal, .maiz_price ul .cambio_30porc_cereal {
         display: none; }
   .sorgo_price {
     grid-area: sorgo_price;
@@ -284,8 +284,150 @@
         color: #24a49c; }
       .sorgo_price ul #cambio_24porc_cereal_trigo {
         color: #ec5454; }
-      .sorgo_price ul .desktop_extra_prices {
-        display: none; } }
+      .sorgo_price ul .cambio_7_cereal, .sorgo_price ul .cambio_30_cereal, .sorgo_price ul .cambio_7porc_cereal, .sorgo_price ul .cambio_30porc_cereal {
+        display: none; }
+  .imagen_cereales {
+    display: none; } }
+
+@media only screen and (min-width: 750px) {
+  .estructura_main_precios {
+    display: grid;
+    grid-template-areas: "imagen_cereal soja_price" "imagen_cereal trigo_price" "imagen_cereal maiz_price" "imagen_cereal sorgo_price"; }
+  .imagen_cereal {
+    grid-area: imagen_cereal; }
+    .imagen_cereal ul, .imagen_cereal div {
+      display: flex;
+      flex-flow: row no wrap;
+      display: grid;
+      grid-template-areas: "nombre_cereal nombre_cereal nombre_cereal nombre_cereal" "desktop_extra_prices cambio_24_cereal cambio_7_cereal cambio_30_cereal" "precio_cereal cambio_24porc_cereal cambio_7porc_cereal cambio_30porc_cereal"; }
+      .imagen_cereal ul .nombre_cereal, .imagen_cereal div .nombre_cereal {
+        grid-area: nombre_cereal; }
+      .imagen_cereal ul .desktop_extra_prices, .imagen_cereal div .desktop_extra_prices {
+        grid-area: desktop_extra_prices; }
+      .imagen_cereal ul .precio_cereal, .imagen_cereal div .precio_cereal {
+        grid-area: precio_cereal; }
+      .imagen_cereal ul .cambio_24_cereal, .imagen_cereal div .cambio_24_cereal {
+        grid-area: cambio_24_cereal; }
+      .imagen_cereal ul .cambio_24porc_cereal, .imagen_cereal div .cambio_24porc_cereal {
+        grid-area: cambio_24porc_cereal; }
+      .imagen_cereal ul .cambio_7_cereal, .imagen_cereal div .cambio_7_cereal {
+        grid-area: cambio_7_cereal; }
+      .imagen_cereal ul .cambio_7porc_cereal, .imagen_cereal div .cambio_7porc_cereal {
+        grid-area: cambio_7porc_cereal; }
+      .imagen_cereal ul .cambio_30_cereal, .imagen_cereal div .cambio_30_cereal {
+        grid-area: cambio_30_cereal; }
+      .imagen_cereal ul .cambio_30porc_cereal, .imagen_cereal div .cambio_30porc_cereal {
+        grid-area: cambio_30porc_cereal; }
+      .imagen_cereal ul li, .imagen_cereal div li {
+        list-style: none; }
+  .soja_price {
+    grid-area: soja_price; }
+    .soja_price ul, .soja_price div {
+      display: flex;
+      flex-flow: row no wrap;
+      display: grid;
+      grid-template-areas: "nombre_cereal nombre_cereal nombre_cereal nombre_cereal" "desktop_extra_prices cambio_24_cereal cambio_7_cereal cambio_30_cereal" "precio_cereal cambio_24porc_cereal cambio_7porc_cereal cambio_30porc_cereal"; }
+      .soja_price ul .nombre_cereal, .soja_price div .nombre_cereal {
+        grid-area: nombre_cereal; }
+      .soja_price ul .desktop_extra_prices, .soja_price div .desktop_extra_prices {
+        grid-area: desktop_extra_prices; }
+      .soja_price ul .precio_cereal, .soja_price div .precio_cereal {
+        grid-area: precio_cereal; }
+      .soja_price ul .cambio_24_cereal, .soja_price div .cambio_24_cereal {
+        grid-area: cambio_24_cereal; }
+      .soja_price ul .cambio_24porc_cereal, .soja_price div .cambio_24porc_cereal {
+        grid-area: cambio_24porc_cereal; }
+      .soja_price ul .cambio_7_cereal, .soja_price div .cambio_7_cereal {
+        grid-area: cambio_7_cereal; }
+      .soja_price ul .cambio_7porc_cereal, .soja_price div .cambio_7porc_cereal {
+        grid-area: cambio_7porc_cereal; }
+      .soja_price ul .cambio_30_cereal, .soja_price div .cambio_30_cereal {
+        grid-area: cambio_30_cereal; }
+      .soja_price ul .cambio_30porc_cereal, .soja_price div .cambio_30porc_cereal {
+        grid-area: cambio_30porc_cereal; }
+      .soja_price ul li, .soja_price div li {
+        list-style: none; }
+  .trigo_price {
+    grid-area: trigo_price; }
+    .trigo_price ul, .trigo_price div {
+      display: flex;
+      flex-flow: row no wrap;
+      display: grid;
+      grid-template-areas: "nombre_cereal nombre_cereal nombre_cereal nombre_cereal" "desktop_extra_prices cambio_24_cereal cambio_7_cereal cambio_30_cereal" "precio_cereal cambio_24porc_cereal cambio_7porc_cereal cambio_30porc_cereal"; }
+      .trigo_price ul .nombre_cereal, .trigo_price div .nombre_cereal {
+        grid-area: nombre_cereal; }
+      .trigo_price ul .desktop_extra_prices, .trigo_price div .desktop_extra_prices {
+        grid-area: desktop_extra_prices; }
+      .trigo_price ul .precio_cereal, .trigo_price div .precio_cereal {
+        grid-area: precio_cereal; }
+      .trigo_price ul .cambio_24_cereal, .trigo_price div .cambio_24_cereal {
+        grid-area: cambio_24_cereal; }
+      .trigo_price ul .cambio_24porc_cereal, .trigo_price div .cambio_24porc_cereal {
+        grid-area: cambio_24porc_cereal; }
+      .trigo_price ul .cambio_7_cereal, .trigo_price div .cambio_7_cereal {
+        grid-area: cambio_7_cereal; }
+      .trigo_price ul .cambio_7porc_cereal, .trigo_price div .cambio_7porc_cereal {
+        grid-area: cambio_7porc_cereal; }
+      .trigo_price ul .cambio_30_cereal, .trigo_price div .cambio_30_cereal {
+        grid-area: cambio_30_cereal; }
+      .trigo_price ul .cambio_30porc_cereal, .trigo_price div .cambio_30porc_cereal {
+        grid-area: cambio_30porc_cereal; }
+      .trigo_price ul li, .trigo_price div li {
+        list-style: none; }
+  .maiz_price {
+    grid-area: maiz_price; }
+    .maiz_price ul, .maiz_price div {
+      display: flex;
+      flex-flow: row no wrap;
+      display: grid;
+      grid-template-areas: "nombre_cereal nombre_cereal nombre_cereal nombre_cereal" "desktop_extra_prices cambio_24_cereal cambio_7_cereal cambio_30_cereal" "precio_cereal cambio_24porc_cereal cambio_7porc_cereal cambio_30porc_cereal"; }
+      .maiz_price ul .nombre_cereal, .maiz_price div .nombre_cereal {
+        grid-area: nombre_cereal; }
+      .maiz_price ul .desktop_extra_prices, .maiz_price div .desktop_extra_prices {
+        grid-area: desktop_extra_prices; }
+      .maiz_price ul .precio_cereal, .maiz_price div .precio_cereal {
+        grid-area: precio_cereal; }
+      .maiz_price ul .cambio_24_cereal, .maiz_price div .cambio_24_cereal {
+        grid-area: cambio_24_cereal; }
+      .maiz_price ul .cambio_24porc_cereal, .maiz_price div .cambio_24porc_cereal {
+        grid-area: cambio_24porc_cereal; }
+      .maiz_price ul .cambio_7_cereal, .maiz_price div .cambio_7_cereal {
+        grid-area: cambio_7_cereal; }
+      .maiz_price ul .cambio_7porc_cereal, .maiz_price div .cambio_7porc_cereal {
+        grid-area: cambio_7porc_cereal; }
+      .maiz_price ul .cambio_30_cereal, .maiz_price div .cambio_30_cereal {
+        grid-area: cambio_30_cereal; }
+      .maiz_price ul .cambio_30porc_cereal, .maiz_price div .cambio_30porc_cereal {
+        grid-area: cambio_30porc_cereal; }
+      .maiz_price ul li, .maiz_price div li {
+        list-style: none; }
+  .sorgo_price {
+    grid-area: sorgo_price; }
+    .sorgo_price ul, .sorgo_price div {
+      display: flex;
+      flex-flow: row no wrap;
+      display: grid;
+      grid-template-areas: "nombre_cereal nombre_cereal nombre_cereal nombre_cereal" "desktop_extra_prices cambio_24_cereal cambio_7_cereal cambio_30_cereal" "precio_cereal cambio_24porc_cereal cambio_7porc_cereal cambio_30porc_cereal"; }
+      .sorgo_price ul .nombre_cereal, .sorgo_price div .nombre_cereal {
+        grid-area: nombre_cereal; }
+      .sorgo_price ul .desktop_extra_prices, .sorgo_price div .desktop_extra_prices {
+        grid-area: desktop_extra_prices; }
+      .sorgo_price ul .precio_cereal, .sorgo_price div .precio_cereal {
+        grid-area: precio_cereal; }
+      .sorgo_price ul .cambio_24_cereal, .sorgo_price div .cambio_24_cereal {
+        grid-area: cambio_24_cereal; }
+      .sorgo_price ul .cambio_24porc_cereal, .sorgo_price div .cambio_24porc_cereal {
+        grid-area: cambio_24porc_cereal; }
+      .sorgo_price ul .cambio_7_cereal, .sorgo_price div .cambio_7_cereal {
+        grid-area: cambio_7_cereal; }
+      .sorgo_price ul .cambio_7porc_cereal, .sorgo_price div .cambio_7porc_cereal {
+        grid-area: cambio_7porc_cereal; }
+      .sorgo_price ul .cambio_30_cereal, .sorgo_price div .cambio_30_cereal {
+        grid-area: cambio_30_cereal; }
+      .sorgo_price ul .cambio_30porc_cereal, .sorgo_price div .cambio_30porc_cereal {
+        grid-area: cambio_30porc_cereal; }
+      .sorgo_price ul li, .sorgo_price div li {
+        list-style: none; } }
 
 .estructura_main_qs .foto_feed {
   height: 250px;
