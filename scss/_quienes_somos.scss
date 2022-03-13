@@ -1,13 +1,27 @@
 @import "./variables";
 
 .estructura_main_qs{
-    .foto_feed{
-    height: 250px;;
-    object-fit:cover; 
-    padding:1px;
+    background-color: $third_color;
+    .foto_frente{
+    height: 300px;
+    object-fit:cover;
+    width:100%;
+    margin-top:10px;
     }
-    .texto_medio{
-        text-align: center;
+    .foto_feed{
+    height: 200px;
+    width: 100%;
+    object-fit:cover;    
+    }
+    .texto_medio,.texto_titulo{
+        text-align: justify;
+        line-height: 30px;
+        margin-bottom:40px;
+        margin-top:40px;
+    }
+    .texto_titulo{
+        text-decoration: underline;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
 }
     
@@ -15,7 +29,7 @@
 @media only screen and (min-width:750px){
     .estructura_main_qs{
         .foto_feed:hover{
-            transform: scale(1.5,1.5);
+            transform: scale(2,2);
             transition: 2s;
             object-fit:scale-down;
             }

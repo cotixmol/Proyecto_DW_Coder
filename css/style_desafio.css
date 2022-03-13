@@ -111,6 +111,42 @@
       border: 2px solid #3e4095; } }
 
 @media only screen and (max-width: 750px) {
+  .estructura_main_contacto {
+    background-color: #d1c7b7; }
+    .estructura_main_contacto .texto_desktop, .estructura_main_contacto .foto_contacto {
+      display: none; }
+    .estructura_main_contacto form input, .estructura_main_contacto form textarea, .estructura_main_contacto form label {
+      width: 95%;
+      padding: 5px;
+      margin-left: 10px;
+      margin-right: 10px; }
+    .estructura_main_contacto .text_area_desktop {
+      display: none; }
+    .estructura_main_contacto .boton {
+      padding-bottom: 10px;
+      padding-top: 5px; } }
+
+@media only screen and (min-width: 751px) {
+  .estructura_main_contacto {
+    padding-left: 5px; }
+  .text_area_mobile {
+    display: none; }
+  .foto_contacto {
+    width: 95vw;
+    height: 200px;
+    margin-left: 10px;
+    object-fit: cover; }
+  .texto_desktop {
+    padding: 5px;
+    margin-top: 10px; }
+  .etiqueta_form {
+    width: 50vw; }
+  .text_area_desktop {
+    width: 90vw; }
+  .texto_desktop {
+    font-size: 24px; } }
+
+@media only screen and (max-width: 750px) {
   .price {
     display: grid;
     grid-template-areas: "soja_price trigo_price" "maiz_price sorgo_price"; }
@@ -703,17 +739,29 @@
     .sorgo_price #cambio_30porc_cereal_maiz {
       color: #ec5454; } }
 
-.estructura_main_qs .foto_feed {
-  height: 250px;
-  object-fit: cover;
-  padding: 1px; }
-
-.estructura_main_qs .texto_medio {
-  text-align: center; }
+.estructura_main_qs {
+  background-color: #d1c7b7; }
+  .estructura_main_qs .foto_frente {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+    margin-top: 10px; }
+  .estructura_main_qs .foto_feed {
+    height: 200px;
+    width: 100%;
+    object-fit: cover; }
+  .estructura_main_qs .texto_medio, .estructura_main_qs .texto_titulo {
+    text-align: justify;
+    line-height: 30px;
+    margin-bottom: 40px;
+    margin-top: 40px; }
+  .estructura_main_qs .texto_titulo {
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
 
 @media only screen and (min-width: 750px) {
   .estructura_main_qs .foto_feed:hover {
-    transform: scale(1.5, 1.5);
+    transform: scale(2, 2);
     transition: 2s;
     object-fit: scale-down; }
   .estructura_main_qs .borrador_2 {

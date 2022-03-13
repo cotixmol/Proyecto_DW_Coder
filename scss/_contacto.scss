@@ -1,1 +1,51 @@
 @import "./variables";
+
+@media only screen and (max-width:750px){
+    .estructura_main_contacto{
+        background-color: $third_color;
+        .texto_desktop,.foto_contacto{
+            display:none;
+        }
+        form input, form textarea,form label{
+            width:95%;       
+            padding:5px;
+            margin-left:10px;
+            margin-right:10px;
+        }
+        .text_area_desktop{
+            display:none;
+        }
+        .boton{
+            padding-bottom:10px;
+            padding-top:5px;
+        }
+    }
+}
+
+@media only screen and (min-width:751px){
+        .estructura_main_contacto{
+            padding-left:5px;
+        }
+        .text_area_mobile{
+            display:none;
+        }   
+        .foto_contacto{
+            width: 95vw;
+            height: 200px;
+            margin-left:10px;
+            object-fit: cover;
+        }
+        .texto_desktop{
+            padding:5px;
+            margin-top:10px;
+        }
+        .etiqueta_form{
+                width:50vw;
+            }
+        .text_area_desktop{
+                width:90vw;
+            }
+        .texto_desktop{
+            font-size: 24px;
+    }
+}
