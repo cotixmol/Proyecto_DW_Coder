@@ -1,11 +1,12 @@
 .fondo_main_index {
   background-color: #d1c7b7; }
   .fondo_main_index img {
-    max-width: 100%; }
+    max-width: 130vw; }
   .fondo_main_index .main_text {
-    text-align: left; }
+    text-align: justify; }
     .fondo_main_index .main_text h3, .fondo_main_index .main_text p {
-      padding: 10px; }
+      padding: 10px;
+      line-height: 30px; }
 
 @media only screen and (min-width: 751px) {
   .fondo_main_index {
@@ -13,16 +14,15 @@
     grid-template-areas: "imagen texto"; }
     .fondo_main_index .main_text {
       grid-area: texto;
-      margin: 50px;
-      padding-left: 30px; }
+      margin: 10px; }
     .fondo_main_index .fondo_trigo_index {
       grid-area: imagen;
-      width: 300px;
-      height: 500px;
+      width: 40vw;
+      height: 98%;
       object-fit: cover;
-      object-position: 90% 90%;
       border: 2px solid #3e4095;
-      margin: 5px; } }
+      margin-bottom: 10px;
+      margin-left: 10px; } }
 
 @media only screen and (max-width: 750px) {
   .estructura_main_comercial .image_servicios {
