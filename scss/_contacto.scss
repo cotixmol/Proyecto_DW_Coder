@@ -1,20 +1,26 @@
 @import "./variables";
-
+ 
+//Estructura para MOBILE//
 @media only screen and (max-width:750px){
+    //Color de fondo//
     .estructura_main_contacto{
         background-color: $third_color;
+        //Escondo los textos de la versión Mobile, como estaba planteado en el Wireframes//
         .texto_desktop,.foto_contacto{
             display:none;
         }
+        //Organización comun de los formularios y textos//
         form input, form textarea,form label{
             width:95%;       
             padding:5px;
             margin-left:10px;
             margin-right:10px;
         }
+        //Borro el text area de desktop, que es mucho mas grande//
         .text_area_desktop{
             display:none;
         }
+        //Configuración del boton//
         .boton{
             padding-bottom:10px;
             padding-top:5px;
@@ -22,13 +28,16 @@
     }
 }
 
+//Estructura para Desktop//
 @media only screen and (min-width:751px){
         .estructura_main_contacto{
             padding-left:5px;
         }
+        //Borro el text area del Mobile, que es mas pequeño//
         .text_area_mobile{
             display:none;
         }   
+        //Ordeno la foto de contacto//
         .foto_contacto{
             width: 95vw;
             height: 200px;

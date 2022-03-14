@@ -2,8 +2,10 @@
 
 
 .fondo_main_index{
+    //Color de fondo//
     background-color:$third_color;
     img{
+        //Organización de imagenes//
         width:97vw;
     }
     .main_text{
@@ -15,6 +17,7 @@
     }
 }
 
+//Estructura Desktop//
 @media only screen and (min-width:751px){
     .fondo_main_index{
         display:grid;
@@ -23,6 +26,7 @@
             grid-area:texto;
             margin: 10px;
         }
+        //Configuración de la imagen//
         .fondo_trigo_index{
                 grid-area: imagen;
 
